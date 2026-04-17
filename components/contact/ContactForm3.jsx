@@ -1,5 +1,5 @@
 "use client";
-import { Mail, Phone, MapPin, Send, MessageSquare } from 'lucide-react';
+
 import { useState } from "react";
 
 
@@ -25,16 +25,13 @@ export default function ContactForm3() {
         e.preventDefault();
         setLoading(true);
         setStatus({ type: "", message: "" });
-
         try {
             const res = await fetch("/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
             });
-
             const data = await res.json();
-
             if (res.ok) {
                 setStatus({ type: "success", message: "Message sent successfully!" });
                 setFormData({ fullName: "", email: "", mobile: "", message: "" });

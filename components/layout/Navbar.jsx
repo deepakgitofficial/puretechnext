@@ -47,7 +47,6 @@ const Navbar = () => {
         { name: 'Web Development', path: '/services/web-development' },
         { name: 'E-commerce', path: '/services/ecommerce-development' },
         { name: 'WordPress Development', path: '/services/wordpress-development' },
-
       ]
     },
     { name: 'Portfolio', path: '/portfolio' },

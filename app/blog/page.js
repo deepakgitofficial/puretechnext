@@ -97,15 +97,12 @@ export default async function BlogListingPage() {
                       className="w-full h-full object-cover  transition-transform duration-500"
                     />
                   )}
-
                   {/* <div className="absolute inset-0 bg-gradient-to-tr from-primary/70 to-accent/70 mix-blend-multiply"></div> */}
-
                   {/* Category */}
                   <div className="absolute top-4 left-4 bg-primary backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider">
                     {post?.category?.replace("-", " ")}
                   </div>
                 </div>
-
                 {/* Content */}
                 <div className="p-6 flex flex-col flex-grow">
                   {/* Meta */}

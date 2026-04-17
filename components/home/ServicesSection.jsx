@@ -17,12 +17,7 @@ const ServicesSection = () => {
       desc: 'Custom WordPress websites built with modern technologies for maximum speed and functionality.',
       path: '/services/wordpress-development'
     },
-    // {
-    //   title: 'E-commerce Solutions',
-    //   icon: <TrendingUp className="h-8 w-8 text-accent" />,
-    //   desc: 'High-converting online stores built on Shopify, WooCommerce, or custom Next.js commerce architectures.',
-    //   path: '/services/ecommerce-development'
-    // },
+
     {
       title: 'Web Application Development',
       icon: <TrendingUp className="h-8 w-8 text-accent" />,
@@ -34,6 +29,12 @@ const ServicesSection = () => {
     //   icon: <TrendingUp className="h-8 w-8 text-accent" />,
     //   desc: 'Affordable, professional websites designed specifically for small businesses to establish their online presence.',
     //   path: '/services/small-business-websites'
+    // },
+    // {
+    //   title: 'E-commerce Solutions',
+    //   icon: <TrendingUp className="h-8 w-8 text-accent" />,
+    //   desc: 'High-converting online stores built on Shopify, WooCommerce, or custom Next.js commerce architectures.',
+    //   path: '/services/ecommerce-development'
     // },
 
   ];
