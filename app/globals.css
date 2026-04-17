@@ -1,26 +1,153 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-:root {
+@theme {
+  --color-primary: #00c2f0;
+  --color-primary-dark: #0f4560;
+  --color-secondary: #0f2b40;
+  --color-accent: #00bfaa;
+  --font-heading: 'var(--font-montserrat)';
+  --font-body: 'var(--font-roboto)';
+}
+
+:root,
+.light {
+  color-scheme: light;
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #333333;
+  /* Dark gray for text */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  color-scheme: dark;
+  --background: #0f2b40;
+  --foreground: #ededed;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  @apply antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), Arial, sans-serif;
+}
+
+.dark .bg-white {
+  background-color: #0f2b40;
+}
+
+.dark .text-gray-500 {
+  color: #ededed;
+}
+
+.dark .text-gray-600 {
+  color: #ededed;
+}
+
+.dark .text-gray-700 {
+  color: #ededed;
+}
+
+.dark .text-gray-800 {
+  color: #ededed;
+}
+
+.dark .text-gray-900 {
+  color: #ededed;
+}
+
+.dark .text-gray-400 {
+  color: #ededed;
+}
+
+.dark .text-gray-300 {
+  color: #ededed;
+}
+
+.dark .text-gray-200 {
+  color: #ededed;
+}
+
+.dark .text-gray-100 {
+  color: #ededed;
+}
+
+
+.light .bg-white {
+  background-color: #ffffff;
+}
+
+.light .text-gray-500 {
+  color: #333333;
+}
+
+.light .text-gray-600 {
+  color: #333333;
+}
+
+.light .text-gray-700 {
+  color: #333333;
+}
+
+.light .text-gray-800 {
+  color: #333333;
+}
+
+.light .text-gray-900 {
+  color: #333333;
+}
+
+.light .text-gray-400 {
+  color: #333333;
+}
+
+.light .text-gray-300 {
+  color: #333333;
+}
+
+.light .text-gray-200 {
+  color: #333333;
+}
+
+.light .text-gray-100 {
+  color: #333333;
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+
+  .glass-dark {
+    @apply bg-black/10 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+}
+
+
+.cursor {
+  display: inline-block;
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
