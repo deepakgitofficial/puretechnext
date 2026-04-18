@@ -3,14 +3,7 @@ import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 import { client } from '@/lib/sanity'
 
-// Sanity Client Setup (Backend only)
-// const client = createClient({
-//     projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-//     dataset: "production",
-//     useCdn: false,
-//     token: process.env.SANITY_WRITE_TOKEN, // .env.local se aayega
-//     apiVersion: "2023-01-01",
-// });
+
 
 export async function POST(req) {
 
